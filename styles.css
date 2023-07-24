@@ -1,6 +1,17 @@
 body{height:100%; position:relative}
 
-div{
+/* div{
+  margin:auto;
+  height: 300px;
+  width: 300px;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+} */
+
+.march{
   margin:auto;
   height: 300px;
   width: 300px;
@@ -11,14 +22,44 @@ div{
   right:0;
 }
 
-img
-{
-  transition-duration: 0.4s;
+
+@keyframes spin1 { 100% { transform:rotate(360deg); } }
+@keyframes spin2 { 100% { transform:rotate(-360deg); } }
+@keyframes idle { 100% {} }
+
+/* .icon-conatiner:active {
+  animation: press 0.2s 1 linear;
+}
+.icon-conatiner:active svg:last-child {
+  animation: bounce 0.2s 1 linear;
+} */
+
+.animateDescriptor {    
+  animation: press 0.25s;  
+}  
+
+.animated{
+  animation-name: press;
+  animation-duration: 1s;
 }
 
-img.half
-{
-  transform: scale(0.5);
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-
-
+@keyframes bounce {
+  50% {
+    transform: rotate(5deg) translate(20px, -50px);
+  }
+  to {
+    transform: scale(0.9) rotate(10deg) translate(50px, -80px);
+    opacity: 0;
+  }
+}
