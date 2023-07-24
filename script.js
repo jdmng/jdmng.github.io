@@ -5,6 +5,7 @@ function play() {
     var element = document.getElementById("march");
     var randomMarchNum = Math.floor(Math.random() * 3);
 
+    // Play a random March 7th voice clip.
     switch(randomMarchNum) {
         case 0:
             audio = document.getElementById("audio0");
@@ -16,9 +17,9 @@ function play() {
             audio = document.getElementById("audio2");
             break;
     }
-
     audio.play();
 
+    // Animate button press.
     element.classList.add("animateDescriptor");
     element.addEventListener( "animationend",  function() {
       element.classList.remove("animateDescriptor");    
