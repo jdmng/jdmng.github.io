@@ -1,0 +1,24 @@
+body{height:100%; position:relative}
+
+div{
+  margin:auto;
+  height: 300px;
+  width: 300px;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+img
+{
+  transition-duration: 0.4s;
+}
+
+img.half
+{
+  transform: scale(0.5);
+}
+
+
